@@ -111,9 +111,9 @@ export default function Home() {
                   <h1 className="text-3xl sm:text-4xl font-bold tracking-tighter md:text-5xl lg:text-6xl animate-slide-up">
                     Job hunting is{" "}
                     <span className="animate-text-shimmer bg-clip-text text-transparent bg-gradient-to-r from-blue-500 via-blue-400 to-blue-600">
-                      broken
+                      broken.
                     </span>
-                    . <br></br> We fixed it.
+                     <br></br> We fixed it.
                   </h1>
                   <p className="max-w-[600px] text-gray-600 text-base md:text-xl lg:text-base xl:text-xl animate-fade-in delay-200">
                     Stop wasting time refreshing job boards. NextGig delivers
@@ -262,7 +262,7 @@ export default function Home() {
                 <CardHeader className="text-center">
                   <CardTitle className="text-2xl">NextGig Premium</CardTitle>
                   <CardDescription className="text-3xl font-bold">
-                    £1.99/month
+                    £2.99/month
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
