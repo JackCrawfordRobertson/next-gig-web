@@ -8,7 +8,7 @@ const inter = Inter({
 });
 
 export const metadata = {
-  title: "Next Gig",
+  title: "Next Gig - Home",
   description: "Aggregated job listings from various sources",
   icons: {
     icon: "/Blue_LogoV2.svg",
