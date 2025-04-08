@@ -44,30 +44,6 @@ export default function Home() {
         <SectionArrows />
       </div>
 
-      {/* Mobile arrow decorations */}
-      <div className="absolute right-0 top-[60vh] w-[100px] z-[1] md:hidden">
-        <svg viewBox="890 100 250 500" width="100%" height="100%">
-          <path
-            fill="none"
-            stroke="#1e90ff"
-            strokeWidth="12"
-            strokeLinecap="round"
-            d="M899.91,549.5c9.49-58.49,25.61-104.06,38.96-135.33,26.56-62.22,58.35-105.78,96.37-157.89,28.63-39.23,54.67-70.42,73.82-92.27"
-          />
-        </svg>
-      </div>
-
-      <div className="absolute left-0 top-[160vh] w-[100px] z-[1] md:hidden">
-        <svg viewBox="410 750 380 280" width="100%" height="100%">
-          <path
-            fill="none"
-            stroke="#ff008c"
-            strokeWidth="12"
-            strokeLinecap="round"
-            d="M427.91,1013.12c8.47-46.73,27.18-77.56,39.43-94.3,13.27-18.13,25.75-34.67,46.29-37.72,23.91-3.55,44.57,13.27,51.44,18.86"
-          />
-        </svg>
-      </div>
 
       {/* Header with improved shadcn styling */}
       <header className="flex h-16 items-center justify-between px-4 md:px-6 bg-white border-b border-gray-100 sticky top-0 z-10">
