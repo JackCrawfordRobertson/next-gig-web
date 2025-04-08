@@ -1,6 +1,8 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-    siteUrl: 'https://home.next-gig.co.uk',
-    generateRobotsTxt: true,
-  };
-  
+  siteUrl: 'https://home.next-gig.co.uk', // or next-gig.co.uk for your other subdomain
+  generateRobotsTxt: true,
+  generateIndexSitemap: true,
+  outDir: './public',
+  sourceDir: './.next', // 🔑 tells next-sitemap where to look
+};
