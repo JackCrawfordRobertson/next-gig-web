@@ -38,7 +38,7 @@ export default function Home() {
   }
 
   return (
-    <div className="flex min-h-screen flex-col bg-white overflow-x-hidden relative">
+    <div className="flex min-h-screen flex-col bg-white dark:bg-gray-950 overflow-x-hidden relative transition-colors duration-300">
       {/* Section arrows for visual interest */}
       <div className="absolute inset-0 z-[1] hidden md:block">
         <SectionArrows />
@@ -46,14 +46,14 @@ export default function Home() {
 
 
       {/* Header with improved shadcn styling */}
-      <header className="flex h-16 items-center justify-between px-4 md:px-6 bg-white border-b border-gray-100 sticky top-0 z-10">
+      <header className="flex h-16 items-center justify-between px-4 md:px-6 bg-white dark:bg-gray-900 border-b border-gray-100 dark:border-gray-800 sticky top-0 z-10 transition-colors duration-300">
         <div className="flex items-center gap-2">
           <Image
             src="/nextgig-logo.svg"
             alt="NextGig"
             width={32}
             height={32}
-            className="h-8 w-auto animate-fade-in-down"
+            className="h-8 w-auto animate-fade-in-down dark:invert transition-all duration-300"
           />
         </div>
 
@@ -61,21 +61,21 @@ export default function Home() {
           <Button
             variant="ghost"
             onClick={() => scrollToSection("features")}
-            className="text-sm font-medium hover:text-blue-500 transition-colors"
+            className="text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400 transition-colors duration-300"
           >
             Features
           </Button>
           <Button
             variant="ghost"
             onClick={() => scrollToSection("how-it-works")}
-            className="text-sm font-medium hover:text-blue-500 transition-colors"
+            className="text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400 transition-colors duration-300"
           >
             How It Works
           </Button>
           <Button
             variant="ghost"
             onClick={() => scrollToSection("pricing")}
-            className="text-sm font-medium hover:text-blue-500 transition-colors"
+            className="text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400 transition-colors duration-300"
           >
             Pricing
           </Button>
@@ -85,7 +85,7 @@ export default function Home() {
           <Link href="https://next-gig.co.uk/login" className="cursor-pointer">
             <Button
               variant="ghost"
-              className="hover:bg-blue-50 transition-all text-sm px-2 sm:px-4 sm:text-base cursor-pointer"
+              className="text-gray-700 dark:text-gray-300 hover:bg-blue-50 dark:hover:bg-gray-800 transition-all duration-300 text-sm px-2 sm:px-4 sm:text-base cursor-pointer"
             >
               Log In
             </Button>
@@ -117,7 +117,7 @@ export default function Home() {
                     </span>
                     <br /> We fixed it.
                   </h1>
-                  <p className="max-w-[600px] text-gray-600 text-base md:text-xl lg:text-base xl:text-xl">
+                  <p className="max-w-[600px] text-gray-600 dark:text-gray-400 text-base md:text-xl lg:text-base xl:text-xl transition-colors duration-300">
                     Stop wasting time refreshing job boards. NextGig delivers
                     fresh opportunities to your inbox every 8 hours. Because the
                     best gigs wait for no one.
@@ -150,10 +150,10 @@ export default function Home() {
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <h2 className="text-2xl sm:text-3xl font-bold tracking-tighter md:text-4xl lg:text-5xl">
+                <h2 className="text-2xl sm:text-3xl font-bold tracking-tighter md:text-4xl lg:text-5xl dark:text-white transition-colors duration-300">
                   What we do differently
                 </h2>
-                <p className="max-w-[600px] text-gray-600 text-base md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                <p className="max-w-[600px] text-gray-600 dark:text-gray-400 text-base md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed transition-colors duration-300">
                   Finding jobs shouldn't feel like a second job.
                 </p>
               </div>
@@ -166,14 +166,14 @@ export default function Home() {
                 transition={{ duration: 0.5 }}
                 viewport={{ once: true }}
               >
-                <Card className="bg-white border border-gray-100 shadow-sm hover:shadow-lg transition-all hover:-translate-y-2 h-full">
+                <Card className="bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-800 shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-2 h-full">
                   <CardHeader>
                     <CardTitle className="text-xl bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-blue-400">
                       Fresh finds every 8 hours
                     </CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p>
+                    <p className="dark:text-gray-400 transition-colors duration-300">
                       While others sleep, we keep looking. New opportunities
                       land on your dashboard three times daily.
                     </p>
@@ -187,14 +187,14 @@ export default function Home() {
                 transition={{ duration: 0.5, delay: 0.1 }}
                 viewport={{ once: true }}
               >
-                <Card className="bg-transparent border border-gray-100 shadow-sm hover:shadow-lg transition-all hover:-translate-y-2 h-full">
+                <Card className="bg-white/50 dark:bg-gray-900 border border-gray-100 dark:border-gray-800 shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-2 h-full">
                   <CardHeader>
                     <CardTitle className="text-xl bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-blue-400">
                       Uncannily accurate matches
                     </CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p>
+                    <p className="dark:text-gray-400 transition-colors duration-300">
                       Our algorithm gets you. It learns what you want and
                       filters out what you don't. No more scrolling through
                       irrelevant listings.
@@ -210,14 +210,14 @@ export default function Home() {
                 viewport={{ once: true }}
                 className="sm:col-span-2 md:col-span-1"
               >
-                <Card className="bg-white border border-gray-100 shadow-sm hover:shadow-lg transition-all hover:-translate-y-2 h-full">
+                <Card className="bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-800 shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-2 h-full">
                   <CardHeader>
                     <CardTitle className="text-xl bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-blue-400">
                       Apply with confidence
                     </CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p>
+                    <p className="dark:text-gray-400 transition-colors duration-300">
                       Get the inside track with salary insights, company culture
                       notes, and interview tips for each listing.
                     </p>
@@ -229,16 +229,16 @@ export default function Home() {
         </section>
 
         {/* Integrations Section */}
-        <section className="w-full py-16 md:py-24 bg-gray-300/20 backdrop-blur-sm border-y border-gray-200/70">
+        <section className="w-full py-16 md:py-24 bg-gray-300/20 dark:bg-gray-900/50 backdrop-blur-sm border-y border-gray-200/70 dark:border-gray-800 transition-colors duration-300">
           <div className="container px-4 md:px-6">
             <div className="text-center mb-12">
-              <h2 className="text-2xl sm:text-3xl font-bold mb-4">
+              <h2 className="text-2xl sm:text-3xl font-bold mb-4 dark:text-white transition-colors duration-300">
                 Powering your job search{" "}
                 <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-blue-600">
                   everywhere it matters
                 </span>
               </h2>
-              <p className="max-w-2xl mx-auto text-gray-600">
+              <p className="max-w-2xl mx-auto text-gray-600 dark:text-gray-400 transition-colors duration-300">
                 We connect with the world's leading job platforms so you don't
                 miss any opportunities
               </p>
@@ -252,75 +252,75 @@ export default function Home() {
 
               <TabsContent value="active" className="space-y-4">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                  <Card className="transition-all hover:shadow-md">
+                  <Card className="bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-800 transition-all duration-300 hover:shadow-md">
                     <CardHeader className="pb-2">
                       <div className="flex items-center">
-                        <div className="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center mr-3">
-                          <span className="font-semibold text-blue-600">
+                        <div className="w-10 h-10 rounded-full bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center mr-3 transition-colors duration-300">
+                          <span className="font-semibold text-blue-600 dark:text-blue-400 transition-colors duration-300">
                             Li
                           </span>
                         </div>
-                        <CardTitle className="text-lg">LinkedIn</CardTitle>
+                        <CardTitle className="text-lg dark:text-white transition-colors duration-300">LinkedIn</CardTitle>
                         <Badge
                           variant="default"
-                          className="ml-auto bg-green-500"
+                          className="ml-auto bg-green-500 dark:bg-green-600 transition-colors duration-300"
                         >
                           Live
                         </Badge>
                       </div>
                     </CardHeader>
                     <CardContent>
-                      <p className="text-sm text-gray-500">
+                      <p className="text-sm text-gray-500 dark:text-gray-400 transition-colors duration-300">
                         Professional network jobs, including premium listings
                         and exclusive opportunities
                       </p>
                     </CardContent>
                   </Card>
 
-                  <Card className="transition-all hover:shadow-md">
+                  <Card className="bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-800 transition-all duration-300 hover:shadow-md">
                     <CardHeader className="pb-2">
                       <div className="flex items-center">
-                        <div className="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center mr-3">
-                          <span className="font-semibold text-blue-600">
+                        <div className="w-10 h-10 rounded-full bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center mr-3 transition-colors duration-300">
+                          <span className="font-semibold text-blue-600 dark:text-blue-400 transition-colors duration-300">
                             Iy
                           </span>
                         </div>
-                        <CardTitle className="text-lg">If You Could</CardTitle>
+                        <CardTitle className="text-lg dark:text-white transition-colors duration-300">If You Could</CardTitle>
                         <Badge
                           variant="default"
-                          className="ml-auto bg-green-500"
+                          className="ml-auto bg-green-500 dark:bg-green-600 transition-colors duration-300"
                         >
                           Live
                         </Badge>
                       </div>
                     </CardHeader>
                     <CardContent>
-                      <p className="text-sm text-gray-500">
+                      <p className="text-sm text-gray-500 dark:text-gray-400 transition-colors duration-300">
                         Curated job board specialising in flexible and
                         progressive roles for creative professionals
                       </p>
                     </CardContent>
                   </Card>
 
-                  <Card className="transition-all hover:shadow-md">
+                  <Card className="bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-800 transition-all duration-300 hover:shadow-md">
                     <CardHeader className="pb-2">
                       <div className="flex items-center">
-                        <div className="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center mr-3">
-                          <span className="font-semibold text-blue-600">
+                        <div className="w-10 h-10 rounded-full bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center mr-3 transition-colors duration-300">
+                          <span className="font-semibold text-blue-600 dark:text-blue-400 transition-colors duration-300">
                             UN
                           </span>
                         </div>
-                        <CardTitle className="text-lg">UNJobs</CardTitle>
+                        <CardTitle className="text-lg dark:text-white transition-colors duration-300">UNJobs</CardTitle>
                         <Badge
                           variant="default"
-                          className="ml-auto bg-green-500"
+                          className="ml-auto bg-green-500 dark:bg-green-600 transition-colors duration-300"
                         >
                           Live
                         </Badge>
                       </div>
                     </CardHeader>
                     <CardContent>
-                      <p className="text-sm text-gray-500">
+                      <p className="text-sm text-gray-500 dark:text-gray-400 transition-colors duration-300">
                         International development and humanitarian sector
                         opportunities from UN agencies and NGOs
                       </p>
@@ -331,75 +331,75 @@ export default function Home() {
 
               <TabsContent value="coming" className="space-y-4">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                  <Card className="transition-all hover:shadow-md opacity-80">
+                  <Card className="bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-800 transition-all duration-300 hover:shadow-md opacity-80">
                     <CardHeader className="pb-2">
                       <div className="flex items-center">
-                        <div className="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center mr-3">
-                          <span className="font-semibold text-gray-500">
+                        <div className="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center mr-3 transition-colors duration-300">
+                          <span className="font-semibold text-gray-500 dark:text-gray-400 transition-colors duration-300">
                             GD
                           </span>
                         </div>
-                        <CardTitle className="text-lg">Glassdoor</CardTitle>
+                        <CardTitle className="text-lg dark:text-white transition-colors duration-300">Glassdoor</CardTitle>
                         <Badge
                           variant="outline"
-                          className="ml-auto bg-blue-50 text-blue-600 border-blue-200"
+                          className="ml-auto bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 border-blue-200 dark:border-blue-800 transition-colors duration-300"
                         >
                           Soon
                         </Badge>
                       </div>
                     </CardHeader>
                     <CardContent>
-                      <p className="text-sm text-gray-500">
+                      <p className="text-sm text-gray-500 dark:text-gray-400 transition-colors duration-300">
                         Search jobs while accessing company ratings, salary
                         insights, and authentic employee reviews
                       </p>
                     </CardContent>
                   </Card>
 
-                  <Card className="transition-all hover:shadow-md opacity-80">
+                  <Card className="bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-800 transition-all duration-300 hover:shadow-md opacity-80">
                     <CardHeader className="pb-2">
                       <div className="flex items-center">
-                        <div className="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center mr-3">
-                          <span className="font-semibold text-gray-500">
+                        <div className="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center mr-3 transition-colors duration-300">
+                          <span className="font-semibold text-gray-500 dark:text-gray-400 transition-colors duration-300">
                             WK
                           </span>
                         </div>
-                        <CardTitle className="text-lg">Workable</CardTitle>
+                        <CardTitle className="text-lg dark:text-white transition-colors duration-300">Workable</CardTitle>
                         <Badge
                           variant="outline"
-                          className="ml-auto bg-blue-50 text-blue-600 border-blue-200"
+                          className="ml-auto bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 border-blue-200 dark:border-blue-800 transition-colors duration-300"
                         >
                           Soon
                         </Badge>
                       </div>
                     </CardHeader>
                     <CardContent>
-                      <p className="text-sm text-gray-500">
+                      <p className="text-sm text-gray-500 dark:text-gray-400 transition-colors duration-300">
                         Access high-quality positions directly from thousands of
                         companies' recruitment systems
                       </p>
                     </CardContent>
                   </Card>
 
-                  <Card className="transition-all hover:shadow-md opacity-80">
+                  <Card className="bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-800 transition-all duration-300 hover:shadow-md opacity-80">
                     <CardHeader className="pb-2">
                       <div className="flex items-center">
-                        <div className="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center mr-3">
-                          <span className="font-semibold text-gray-500">
+                        <div className="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center mr-3 transition-colors duration-300">
+                          <span className="font-semibold text-gray-500 dark:text-gray-400 transition-colors duration-300">
                             ZR
                           </span>
                         </div>
-                        <CardTitle className="text-lg">ZipRecruiter</CardTitle>
+                        <CardTitle className="text-lg dark:text-white transition-colors duration-300">ZipRecruiter</CardTitle>
                         <Badge
                           variant="outline"
-                          className="ml-auto bg-blue-50 text-blue-600 border-blue-200"
+                          className="ml-auto bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 border-blue-200 dark:border-blue-800 transition-colors duration-300"
                         >
                           Soon
                         </Badge>
                       </div>
                     </CardHeader>
                     <CardContent>
-                      <p className="text-sm text-gray-500">
+                      <p className="text-sm text-gray-500 dark:text-gray-400 transition-colors duration-300">
                         Benefit from AI-powered job matching technology that
                         connects candidates with ideal employers
                       </p>
@@ -414,15 +414,15 @@ export default function Home() {
         {/* How It Works Section */}
         <section
           id="how-it-works"
-          className="w-full py-12 md:py-24 lg:py-32 bg-white"
+          className="w-full py-12 md:py-24 lg:py-32 bg-white dark:bg-gray-950 transition-colors duration-300"
         >
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <h2 className="text-2xl sm:text-3xl font-bold tracking-tighter md:text-4xl lg:text-5xl">
+                <h2 className="text-2xl sm:text-3xl font-bold tracking-tighter md:text-4xl lg:text-5xl dark:text-white transition-colors duration-300">
                   Three steps to your next big break
                 </h2>
-                <p className="max-w-[600px] text-gray-600 text-base md:text-xl/relaxed lg:text-base/snug xl:text-xl/relaxed">
+                <p className="max-w-[600px] text-gray-600 dark:text-gray-400 text-base md:text-xl/relaxed lg:text-base/snug xl:text-xl/relaxed transition-colors duration-300">
                   Simple enough for a Monday morning.
                   <br />
                   Powerful enough to change your career.
@@ -441,8 +441,8 @@ export default function Home() {
                 <div className="flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-r from-blue-500 to-blue-600 shadow-md">
                   <span className="text-xl font-bold text-white">1</span>
                 </div>
-                <h3 className="text-xl font-bold">Tell us what you want</h3>
-                <p className="text-gray-600">
+                <h3 className="text-xl font-bold dark:text-white transition-colors duration-300">Tell us what you want</h3>
+                <p className="text-gray-600 dark:text-gray-400 transition-colors duration-300">
                   Select the job roles you know you can get hired for. Take 2
                   minutes, save 200 hours.
                 </p>
@@ -458,8 +458,8 @@ export default function Home() {
                 <div className="flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-r from-blue-500 to-blue-600 shadow-md">
                   <span className="text-xl font-bold text-white">2</span>
                 </div>
-                <h3 className="text-xl font-bold">Let us hunt for you</h3>
-                <p className="text-gray-600">
+                <h3 className="text-xl font-bold dark:text-white transition-colors duration-300">Let us hunt for you</h3>
+                <p className="text-gray-600 dark:text-gray-400 transition-colors duration-300">
                   Our platform scours the job market while you focus on what
                   matters. New matches every 8 hours.
                 </p>
@@ -475,8 +475,8 @@ export default function Home() {
                 <div className="flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-r from-blue-500 to-blue-600 shadow-md">
                   <span className="text-xl font-bold text-white">3</span>
                 </div>
-                <h3 className="text-xl font-bold">Apply only to the best</h3>
-                <p className="text-gray-600">
+                <h3 className="text-xl font-bold dark:text-white transition-colors duration-300">Apply only to the best</h3>
+                <p className="text-gray-600 dark:text-gray-400 transition-colors duration-300">
                   Choose from curated opportunities that actually match your
                   worth and ambitions.
                 </p>
@@ -488,16 +488,16 @@ export default function Home() {
         {/* Pricing Section */}
         <section
           id="pricing"
-          className="w-full py-12 md:py-24 lg:py-32 bg-gray-300/20 backdrop-blur-sm border-y border-gray-200/70"
+          className="w-full py-12 md:py-24 lg:py-32 bg-gray-300/20 dark:bg-gray-900/50 backdrop-blur-sm border-y border-gray-200/70 dark:border-gray-800 transition-colors duration-300"
         >
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <h2 className="text-2xl sm:text-3xl font-bold tracking-tighter md:text-4xl lg:text-5xl">
-                  Ridiculously affordable
+                <h2 className="text-2xl sm:text-3xl font-bold tracking-tighter md:text-4xl lg:text-5xl dark:text-white transition-colors duration-300">
+                  Completely free to start
                 </h2>
-                <p className="max-w-[600px] text-gray-600 text-base md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  Less than a coffee, more valuable than a recruiter.
+                <p className="max-w-[600px] text-gray-600 dark:text-gray-400 text-base md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed transition-colors duration-300">
+                  Get started today with all core features. Premium features coming soon for power users.
                 </p>
               </div>
             </div>
@@ -509,17 +509,17 @@ export default function Home() {
               transition={{ duration: 0.7 }}
               viewport={{ once: true }}
             >
-              <Card className="bg-white border border-gray-100 shadow-xl hover:shadow-2xl transition-all">
+              <Card className="bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-800 shadow-xl hover:shadow-2xl transition-all duration-300">
                 <CardHeader className="text-center">
-                  <CardTitle className="text-2xl">NextGig Premium</CardTitle>
-                  <CardDescription className="text-3xl font-bold">
-                    £2.99/month
+                  <CardTitle className="text-2xl dark:text-white transition-colors duration-300">NextGig</CardTitle>
+                  <CardDescription className="text-3xl font-bold dark:text-gray-400 transition-colors duration-300">
+                    Free
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
                   <ul className="grid gap-4">
                     <motion.li
-                      className="flex items-center gap-2"
+                      className="flex items-center gap-2 dark:text-gray-300 transition-colors duration-300"
                       initial={{ opacity: 0, x: -20 }}
                       whileInView={{ opacity: 1, x: 0 }}
                       transition={{ duration: 0.3, delay: 0.1 }}
@@ -529,7 +529,7 @@ export default function Home() {
                       <span>Fresh job alerts every 8 hours</span>
                     </motion.li>
                     <motion.li
-                      className="flex items-center gap-2"
+                      className="flex items-center gap-2 dark:text-gray-300 transition-colors duration-300"
                       initial={{ opacity: 0, x: -20 }}
                       whileInView={{ opacity: 1, x: 0 }}
                       transition={{ duration: 0.3, delay: 0.2 }}
@@ -539,7 +539,7 @@ export default function Home() {
                       <span>Personalised dashboard</span>
                     </motion.li>
                     <motion.li
-                      className="flex items-center gap-2"
+                      className="flex items-center gap-2 dark:text-gray-300 transition-colors duration-300"
                       initial={{ opacity: 0, x: -20 }}
                       whileInView={{ opacity: 1, x: 0 }}
                       transition={{ duration: 0.3, delay: 0.3 }}
@@ -549,7 +549,7 @@ export default function Home() {
                       <span>Salary insights and comparisons</span>
                     </motion.li>
                     <motion.li
-                      className="flex items-center gap-2"
+                      className="flex items-center gap-2 dark:text-gray-300 transition-colors duration-300"
                       initial={{ opacity: 0, x: -20 }}
                       whileInView={{ opacity: 1, x: 0 }}
                       transition={{ duration: 0.3, delay: 0.4 }}
@@ -559,7 +559,7 @@ export default function Home() {
                       <span>Application tracking tools</span>
                     </motion.li>
                     <motion.li
-                      className="flex items-center gap-2"
+                      className="flex items-center gap-2 dark:text-gray-300 transition-colors duration-300"
                       initial={{ opacity: 0, x: -20 }}
                       whileInView={{ opacity: 1, x: 0 }}
                       transition={{ duration: 0.3, delay: 0.5 }}
@@ -579,11 +579,11 @@ export default function Home() {
                       size="lg"
                       className="w-full text-base md:text-lg py-6 bg-gradient-to-r from-blue-500 to-blue-600 hover:shadow-lg hover:scale-[1.03] transition-all cursor-pointer"
                     >
-                      Start 7-day free trial
+                      Get started free
                     </Button>
                   </Link>
-                  <p className="text-sm text-center text-gray-500">
-                    No commitment. Cancel anytime.
+                  <p className="text-sm text-center text-gray-500 dark:text-gray-400 transition-colors duration-300">
+                    No credit card required.
                   </p>
                 </CardFooter>
               </Card>
@@ -601,13 +601,13 @@ export default function Home() {
                 transition={{ duration: 0.7 }}
                 viewport={{ once: true }}
               >
-                <h2 className="text-2xl sm:text-3xl font-bold tracking-tighter md:text-4xl lg:text-5xl">
+                <h2 className="text-2xl sm:text-3xl font-bold tracking-tighter md:text-4xl lg:text-5xl dark:text-white transition-colors duration-300">
                   How people use{" "}
                   <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-blue-600">
                     NextGig
                   </span>
                 </h2>
-                <p className="max-w-[600px] text-gray-600 text-base md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                <p className="max-w-[600px] text-gray-600 dark:text-gray-400 text-base md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed transition-colors duration-300">
                   Discover how NextGig fits into different career journeys
                 </p>
               </motion.div>
@@ -620,7 +620,7 @@ export default function Home() {
                 transition={{ duration: 0.6, type: "spring", stiffness: 50 }}
                 viewport={{ once: true }}
               >
-                <Card className="h-full bg-white border border-gray-100 shadow-sm hover:shadow-xl transition-all hover:-translate-y-2 overflow-hidden relative pb-14">
+                <Card className="h-full bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-800 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2 overflow-hidden relative pb-14">
                   {/* Remove this div to remove the dot */}
                   <CardHeader className="relative">
                     <div className="w-12 h-12 rounded-full bg-[#ff8c00] flex items-center justify-center mb-4 shadow-md">
@@ -639,10 +639,10 @@ export default function Home() {
                         />
                       </svg>
                     </div>
-                    <CardTitle className="text-xl">Active job seeker</CardTitle>
+                    <CardTitle className="text-xl dark:text-white transition-colors duration-300">Active job seeker</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-gray-600">
+                    <p className="text-gray-600 dark:text-gray-400 transition-colors duration-300">
                       Get daily updates for your dream role without spending
                       hours scrolling. Set alerts based on exact salary
                       requirements and skills.
@@ -670,7 +670,7 @@ export default function Home() {
                 }}
                 viewport={{ once: true }}
               >
-                <Card className="h-full bg-white border border-gray-100 shadow-sm hover:shadow-xl transition-all hover:-translate-y-2 overflow-hidden relative pb-14">
+                <Card className="h-full bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-800 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2 overflow-hidden relative pb-14">
                   {/* Remove this div to remove the dot */}
                   <CardHeader className="relative">
                     <div className="w-12 h-12 rounded-full bg-[#00cd55] flex items-center justify-center mb-4 shadow-md">
@@ -695,10 +695,10 @@ export default function Home() {
                         />
                       </svg>
                     </div>
-                    <CardTitle className="text-xl">Passive explorer</CardTitle>
+                    <CardTitle className="text-xl dark:text-white transition-colors duration-300">Passive explorer</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-gray-600">
+                    <p className="text-gray-600 dark:text-gray-400 transition-colors duration-300">
                       Keep an eye on the market while happily employed. Stay
                       informed about salary trends and exciting opportunities
                       without actively searching.
@@ -726,7 +726,7 @@ export default function Home() {
                 }}
                 viewport={{ once: true }}
               >
-                <Card className="h-full bg-white border border-gray-100 shadow-sm hover:shadow-xl transition-all hover:-translate-y-2 overflow-hidden relative pb-14">
+                <Card className="h-full bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-800 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2 overflow-hidden relative pb-14">
                   {/* Remove this div to remove the dot */}
                   <CardHeader className="relative">
                     <div className="w-12 h-12 rounded-full bg-[#ff008c] flex items-center justify-center mb-4 shadow-md">
@@ -745,10 +745,10 @@ export default function Home() {
                         />
                       </svg>
                     </div>
-                    <CardTitle className="text-xl">Career changer</CardTitle>
+                    <CardTitle className="text-xl dark:text-white transition-colors duration-300">Career changer</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-gray-600">
+                    <p className="text-gray-600 dark:text-gray-400 transition-colors duration-300">
                       Find roles that match your transferable skills. Our AI
                       identifies positions where your experience is relevant,
                       even in new industries.
@@ -769,7 +769,7 @@ export default function Home() {
         </section>
 
         {/* CTA Section */}
-        <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-300/20 backdrop-blur-sm border-y border-gray-200/70">
+        <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-300/20 dark:bg-gray-900/50 backdrop-blur-sm border-y border-gray-200/70 dark:border-gray-800 transition-colors duration-300">
           <div className="container px-4 md:px-6 text-center">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -777,10 +777,10 @@ export default function Home() {
               transition={{ duration: 0.5 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-2xl sm:text-3xl font-bold tracking-tighter md:text-4xl lg:text-5xl mb-4 md:mb-6">
+              <h2 className="text-2xl sm:text-3xl font-bold tracking-tighter md:text-4xl lg:text-5xl mb-4 md:mb-6 dark:text-white transition-colors duration-300">
                 Great jobs don't wait for perfect timing
               </h2>
-              <p className="max-w-[800px] mx-auto text-gray-600 text-base md:text-xl mb-6 md:mb-8">
+              <p className="max-w-[800px] mx-auto text-gray-600 dark:text-gray-400 text-base md:text-xl mb-6 md:mb-8 transition-colors duration-300">
                 Take control of your career journey today. We'll handle the
                 searching so you can focus on landing the role.
               </p>
@@ -792,7 +792,7 @@ export default function Home() {
                   size="lg"
                   className="text-base md:text-lg px-8 py-6 bg-gradient-to-r from-blue-500 to-blue-600 hover:shadow-lg hover:scale-[1.03] transition-all cursor-pointer"
                 >
-                  Start your free trial
+                  Get started free today
                 </Button>
               </Link>
             </motion.div>
@@ -801,7 +801,7 @@ export default function Home() {
       </main>
 
       {/* Footer */}
-      <footer className="bg-white py-15 w-full px-4 md:px-6 border-t border-gray-100 z-50">
+      <footer className="bg-white dark:bg-gray-900 py-15 w-full px-4 md:px-6 border-t border-gray-100 dark:border-gray-800 z-50 transition-colors duration-300">
         <div className="container mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
             <div className="col-span-2 md:col-span-1">
@@ -810,23 +810,23 @@ export default function Home() {
                 <img
                   src="/nextgig-logo.svg"
                   alt="NextGig Logo"
-                  className="h-8 w-auto mr-2"
+                  className="h-8 w-auto mr-2 dark:invert transition-all duration-300"
                 />
               </div>
-              <p className="text-sm text-gray-600">
+              <p className="text-sm text-gray-600 dark:text-gray-400 transition-colors duration-300">
                 Dream gigs delivered. Not searched for.
               </p>
             </div>
 
             <div>
-              <h3 className="text-base md:text-lg font-bold mb-4">Legal</h3>
+              <h3 className="text-base md:text-lg font-bold mb-4 dark:text-white transition-colors duration-300">Legal</h3>
               <ul className="space-y-2">
                 <li>
                   <Link
                     href="https://next.gig.jack-robertson.co.uk/terms"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-sm text-gray-600 hover:text-gray-900 transition-colors"
+                    className="text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors duration-300"
                   >
                     Terms & Conditions
                   </Link>
@@ -836,7 +836,7 @@ export default function Home() {
                     href="https://next.gig.jack-robertson.co.uk/privacy"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-sm text-gray-600 hover:text-gray-900 transition-colors"
+                    className="text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors duration-300"
                   >
                     Privacy Policy
                   </Link>
@@ -846,7 +846,7 @@ export default function Home() {
                     href="https://next.gig.jack-robertson.co.uk/cookies"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-sm text-gray-600 hover:text-gray-900 transition-colors"
+                    className="text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors duration-300"
                   >
                     Cookies
                   </Link>
@@ -856,10 +856,10 @@ export default function Home() {
 
             {/* Added dedicated cookies policy section */}
             <div>
-              <h3 className="text-base md:text-lg font-bold mb-4">
+              <h3 className="text-base md:text-lg font-bold mb-4 dark:text-white transition-colors duration-300">
                 Cookie Policy
               </h3>
-              <p className="text-sm text-gray-600 mb-3">
+              <p className="text-sm text-gray-600 dark:text-gray-400 mb-3 transition-colors duration-300">
                 We use essential cookies to make our site work.
               </p>
               <button
@@ -877,9 +877,9 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="mt-8 pt-6 border-t border-gray-100">
+          <div className="mt-8 pt-6 border-t border-gray-100 dark:border-gray-800 transition-colors duration-300">
             <div className="flex flex-col md:flex-row justify-between items-center">
-              <p className="text-xs text-gray-500 mb-4 md:mb-0">
+              <p className="text-xs text-gray-500 dark:text-gray-400 mb-4 md:mb-0 transition-colors duration-300">
                 © 2025 NextGig. All rights reserved.
               </p>
 
@@ -891,11 +891,11 @@ export default function Home() {
                   rel="noopener noreferrer"
                   className="flex items-center hover:opacity-80 transition-opacity"
                 >
-                  <span className="text-xs text-gray-500 mr-2">Created by</span>
+                  <span className="text-xs text-gray-500 dark:text-gray-400 mr-2 transition-colors duration-300">Created by</span>
                   <img
                     src="/Blue_LogoV2.svg"
                     alt="Creator Logo"
-                    className="h-6 w-auto transition-transform hover:scale-105"
+                    className="h-6 w-auto transition-transform hover:scale-105 dark:invert"
                   />
                 </Link>
               </div>
