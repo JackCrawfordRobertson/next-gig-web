@@ -112,15 +112,14 @@ export default function Home() {
                 >
                   <h1 className="text-3xl sm:text-4xl font-bold tracking-tighter md:text-5xl lg:text-6xl">
                     Job hunting is{" "}
-                    <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 via-blue-400 to-blue-600">
+                    <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 via-blue-500 to-blue-700 dark:from-blue-400 dark:via-blue-300 dark:to-blue-500">
                       broken.
                     </span>
                     <br /> We fixed it.
                   </h1>
                   <p className="max-w-[600px] text-gray-600 dark:text-gray-400 text-base md:text-xl lg:text-base xl:text-xl transition-colors duration-300">
-                    Stop wasting time refreshing job boards. NextGig delivers
-                    fresh opportunities to your inbox every 8 hours. Because the
-                    best gigs wait for no one.
+                    Jobs that match what you do, delivered every 8 hours.
+                    No refreshing. No scrolling. No nonsense.
                   </p>
                 </motion.div>
               </div>
@@ -151,10 +150,10 @@ export default function Home() {
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
                 <h2 className="text-2xl sm:text-3xl font-bold tracking-tighter md:text-4xl lg:text-5xl dark:text-white transition-colors duration-300">
-                  What we do differently
+                  Three things worth knowing
                 </h2>
                 <p className="max-w-[600px] text-gray-600 dark:text-gray-400 text-base md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed transition-colors duration-300">
-                  Finding jobs shouldn't feel like a second job.
+                  Job hunting shouldn't feel like a job.
                 </p>
               </div>
             </div>
@@ -169,13 +168,12 @@ export default function Home() {
                 <Card className="bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-800 shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-2 h-full">
                   <CardHeader>
                     <CardTitle className="text-xl bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-blue-400">
-                      Fresh finds every 8 hours
+                      Always on
                     </CardTitle>
                   </CardHeader>
                   <CardContent>
                     <p className="dark:text-gray-400 transition-colors duration-300">
-                      While others sleep, we keep looking. New opportunities
-                      land on your dashboard three times daily.
+                      New jobs arrive every 8 hours. Three times a day, every day.
                     </p>
                   </CardContent>
                 </Card>
@@ -190,14 +188,12 @@ export default function Home() {
                 <Card className="bg-white/50 dark:bg-gray-900 border border-gray-100 dark:border-gray-800 shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-2 h-full">
                   <CardHeader>
                     <CardTitle className="text-xl bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-blue-400">
-                      Uncannily accurate matches
+                      Properly matched
                     </CardTitle>
                   </CardHeader>
                   <CardContent>
                     <p className="dark:text-gray-400 transition-colors duration-300">
-                      Our algorithm gets you. It learns what you want and
-                      filters out what you don't. No more scrolling through
-                      irrelevant listings.
+                      Tell us what you do. We find what fits. Only relevant jobs reach you.
                     </p>
                   </CardContent>
                 </Card>
@@ -213,13 +209,12 @@ export default function Home() {
                 <Card className="bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-800 shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-2 h-full">
                   <CardHeader>
                     <CardTitle className="text-xl bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-blue-400">
-                      Apply with confidence
+                      The full picture
                     </CardTitle>
                   </CardHeader>
                   <CardContent>
                     <p className="dark:text-gray-400 transition-colors duration-300">
-                      Get the inside track with salary insights, company culture
-                      notes, and interview tips for each listing.
+                      Salary data, company info, interview prep. Everything you need to decide.
                     </p>
                   </CardContent>
                 </Card>
@@ -233,14 +228,13 @@ export default function Home() {
           <div className="container px-4 md:px-6">
             <div className="text-center mb-12">
               <h2 className="text-2xl sm:text-3xl font-bold mb-4 dark:text-white transition-colors duration-300">
-                Powering your job search{" "}
+                Where we{" "}
                 <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-blue-600">
-                  everywhere it matters
+                  look
                 </span>
               </h2>
               <p className="max-w-2xl mx-auto text-gray-600 dark:text-gray-400 transition-colors duration-300">
-                We connect with the world's leading job platforms so you don't
-                miss any opportunities
+                We search the major job boards. You get the results.
               </p>
             </div>
 
@@ -420,12 +414,10 @@ export default function Home() {
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
                 <h2 className="text-2xl sm:text-3xl font-bold tracking-tighter md:text-4xl lg:text-5xl dark:text-white transition-colors duration-300">
-                  Three steps to your next big break
+                  How it works
                 </h2>
                 <p className="max-w-[600px] text-gray-600 dark:text-gray-400 text-base md:text-xl/relaxed lg:text-base/snug xl:text-xl/relaxed transition-colors duration-300">
-                  Simple enough for a Monday morning.
-                  <br />
-                  Powerful enough to change your career.
+                  Set up once. Then let us do the work.
                 </p>
               </div>
             </div>
@@ -441,10 +433,9 @@ export default function Home() {
                 <div className="flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-r from-blue-500 to-blue-600 shadow-md">
                   <span className="text-xl font-bold text-white">1</span>
                 </div>
-                <h3 className="text-xl font-bold dark:text-white transition-colors duration-300">Tell us what you want</h3>
+                <h3 className="text-xl font-bold dark:text-white transition-colors duration-300">Tell us what you do</h3>
                 <p className="text-gray-600 dark:text-gray-400 transition-colors duration-300">
-                  Select the job roles you know you can get hired for. Take 2
-                  minutes, save 200 hours.
+                  Pick the roles that match your skills. Takes two minutes.
                 </p>
               </motion.div>
 
@@ -458,10 +449,9 @@ export default function Home() {
                 <div className="flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-r from-blue-500 to-blue-600 shadow-md">
                   <span className="text-xl font-bold text-white">2</span>
                 </div>
-                <h3 className="text-xl font-bold dark:text-white transition-colors duration-300">Let us hunt for you</h3>
+                <h3 className="text-xl font-bold dark:text-white transition-colors duration-300">We do the searching</h3>
                 <p className="text-gray-600 dark:text-gray-400 transition-colors duration-300">
-                  Our platform scours the job market while you focus on what
-                  matters. New matches every 8 hours.
+                  Fresh jobs delivered every 8 hours. Automatically.
                 </p>
               </motion.div>
 
@@ -475,10 +465,9 @@ export default function Home() {
                 <div className="flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-r from-blue-500 to-blue-600 shadow-md">
                   <span className="text-xl font-bold text-white">3</span>
                 </div>
-                <h3 className="text-xl font-bold dark:text-white transition-colors duration-300">Apply only to the best</h3>
+                <h3 className="text-xl font-bold dark:text-white transition-colors duration-300">You pick the right one</h3>
                 <p className="text-gray-600 dark:text-gray-400 transition-colors duration-300">
-                  Choose from curated opportunities that actually match your
-                  worth and ambitions.
+                  Apply to the ones that fit. Ignore the rest.
                 </p>
               </motion.div>
             </div>
@@ -494,10 +483,10 @@ export default function Home() {
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
                 <h2 className="text-2xl sm:text-3xl font-bold tracking-tighter md:text-4xl lg:text-5xl dark:text-white transition-colors duration-300">
-                  Completely free to start
+                  Free to use
                 </h2>
                 <p className="max-w-[600px] text-gray-600 dark:text-gray-400 text-base md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed transition-colors duration-300">
-                  Get started today with all core features. Premium features coming soon for power users.
+                  All features included. No credit card required.
                 </p>
               </div>
             </div>
@@ -579,7 +568,7 @@ export default function Home() {
                       size="lg"
                       className="w-full text-base md:text-lg py-6 bg-gradient-to-r from-blue-500 to-blue-600 hover:shadow-lg hover:scale-[1.03] transition-all cursor-pointer"
                     >
-                      Get started free
+                      Get started
                     </Button>
                   </Link>
                   <p className="text-sm text-center text-gray-500 dark:text-gray-400 transition-colors duration-300">
@@ -602,13 +591,13 @@ export default function Home() {
                 viewport={{ once: true }}
               >
                 <h2 className="text-2xl sm:text-3xl font-bold tracking-tighter md:text-4xl lg:text-5xl dark:text-white transition-colors duration-300">
-                  How people use{" "}
+                  Who it's{" "}
                   <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-blue-600">
-                    NextGig
+                    for
                   </span>
                 </h2>
                 <p className="max-w-[600px] text-gray-600 dark:text-gray-400 text-base md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed transition-colors duration-300">
-                  Discover how NextGig fits into different career journeys
+                  Whether you're looking now or just keeping an eye out.
                 </p>
               </motion.div>
             </div>
@@ -643,9 +632,7 @@ export default function Home() {
                   </CardHeader>
                   <CardContent>
                     <p className="text-gray-600 dark:text-gray-400 transition-colors duration-300">
-                      Get daily updates for your dream role without spending
-                      hours scrolling. Set alerts based on exact salary
-                      requirements and skills.
+                      Looking now? Get jobs that match your skills three times a day.
                     </p>
                   </CardContent>
                   <div className="absolute bottom-7 left-5 right-6">
@@ -699,9 +686,7 @@ export default function Home() {
                   </CardHeader>
                   <CardContent>
                     <p className="text-gray-600 dark:text-gray-400 transition-colors duration-300">
-                      Keep an eye on the market while happily employed. Stay
-                      informed about salary trends and exciting opportunities
-                      without actively searching.
+                      Happily employed but curious? Track what's out there without lifting a finger.
                     </p>
                   </CardContent>
                   <div className="absolute bottom-7 left-5 right-6">
@@ -749,9 +734,7 @@ export default function Home() {
                   </CardHeader>
                   <CardContent>
                     <p className="text-gray-600 dark:text-gray-400 transition-colors duration-300">
-                      Find roles that match your transferable skills. Our AI
-                      identifies positions where your experience is relevant,
-                      even in new industries.
+                      Switching industries? We find roles where your skills transfer.
                     </p>
                   </CardContent>
                   <div className="absolute bottom-7 left-5 right-6">
@@ -778,11 +761,10 @@ export default function Home() {
               viewport={{ once: true }}
             >
               <h2 className="text-2xl sm:text-3xl font-bold tracking-tighter md:text-4xl lg:text-5xl mb-4 md:mb-6 dark:text-white transition-colors duration-300">
-                Great jobs don't wait for perfect timing
+                Start now
               </h2>
               <p className="max-w-[800px] mx-auto text-gray-600 dark:text-gray-400 text-base md:text-xl mb-6 md:mb-8 transition-colors duration-300">
-                Take control of your career journey today. We'll handle the
-                searching so you can focus on landing the role.
+                We'll handle the searching. You handle the interviews.
               </p>
               <Link
                 href="https://next-gig.co.uk/complete-profile"
@@ -792,7 +774,7 @@ export default function Home() {
                   size="lg"
                   className="text-base md:text-lg px-8 py-6 bg-gradient-to-r from-blue-500 to-blue-600 hover:shadow-lg hover:scale-[1.03] transition-all cursor-pointer"
                 >
-                  Get started free today
+                  Get started
                 </Button>
               </Link>
             </motion.div>

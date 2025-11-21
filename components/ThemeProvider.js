@@ -8,13 +8,33 @@ export function ThemeProvider({ children }) {
 
   // Initialize theme from localStorage and system preference
   useEffect(() => {
+    // Add meta tag to tell Dark Reader this site has native dark mode
+    if (!document.querySelector('meta[name="darkreader-lock"]')) {
+      const meta = document.createElement('meta');
+      meta.name = 'darkreader-lock';
+      document.head.appendChild(meta);
+    }
+
     const savedTheme = localStorage.getItem("theme");
     const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
 
-    const shouldBeDark = savedTheme === "dark" || (savedTheme === null && prefersDark);
+    // Detect Dark Reader extension
+    const isDarkReaderActive =
+      document.documentElement.hasAttribute('data-darkreader-mode') ||
+      document.documentElement.hasAttribute('data-darkreader-scheme') ||
+      !!document.querySelector('meta[name="darkreader"]');
+
+    // If Dark Reader is detected, force native dark mode
+    const shouldBeDark = isDarkReaderActive || savedTheme === "dark" || (savedTheme === null && prefersDark);
+
     setIsDark(shouldBeDark);
     applyTheme(shouldBeDark);
     setIsMounted(true);
+
+    // If Dark Reader is active, save preference to prevent light mode from overriding
+    if (isDarkReaderActive && savedTheme === null) {
+      localStorage.setItem("theme", "dark");
+    }
   }, []);
 
   const applyTheme = (dark) => {
